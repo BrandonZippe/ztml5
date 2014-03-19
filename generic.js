@@ -15,3 +15,18 @@
 		$('.navContent').hide();
 		$('.navTab').show();
 	});
+
+
+	$('.cms_tab_content').hide();
+	$('.cms_tab_content').first().show();
+	$('.cms_tabset_btn').first().addClass('cms_selected_tab');
+	
+	$('.cms_tabset_btn').click(function (event) {
+        event.preventDefault();
+        $('.cms_tabset_btn').removeClass('cms_selected_tab');
+        $(this).addClass('cms_selected_tab');
+
+        var selectedTAbIndex = $('.cms_tabset .cms_selected_tab').index();
+        $('.cms_tab_content').hide();
+        $('.cms_tab_content').eq(selectedTAbIndex).show();
+    });
