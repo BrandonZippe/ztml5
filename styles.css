@@ -2,7 +2,7 @@
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote,
 a, abbr, acronym, address, big, cite,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+del, dfn, font, img, ins, kbd, q, s, samp,
 small, strike, sub, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -42,8 +42,8 @@ margin: 0px;
 	max-width: 1400px;
 	margin: 0px auto;
 	position: relative;
-	padding-bottom: 2.6em;
-	transition: linear .4s;
+	padding-bottom: 3.6em;
+	transition: .4s;
 }
 
 .footer {
@@ -114,7 +114,7 @@ margin: 0px;
 
 #home {display: none;}
 
-.navItem:hover {
+.navItemShow, .navItem:hover {
 	color: #544761; 
 	text-shadow: 0px 1px 1px #fff;
 	background: #fff;
@@ -218,7 +218,7 @@ padding: 2%;
 font-weight: 600;
 }
 
-.lyric {
+.lyric, .post {
 	width: 90%;
 	padding: 1% 5%;
 	text-align: center;
@@ -235,6 +235,80 @@ font-weight: 600;
 	border-bottom: solid 1px;
 	padding-bottom: 1%;
 	margin-bottom: 1%;
+}
+
+.post img {width: 100%;margin: 4% 0%;}
+
+.albumArt {
+	width: 50%;
+	transition: linear .8s;
+	box-shadow: 0px 1px 1px #777;
+	margin-bottom: 1%;
+}
+
+.jnlPost {
+	width: 98%;
+	padding: 1% 2%;
+	margin: 2% auto;
+	font-size: 16px;
+	text-align: center;
+	transition: linear .5s;
+	float: left;
+}
+
+.jnlPost a {
+	text-decoration: none;
+	color: #6E27B6;
+}
+
+.backgroundHome {
+	background: #000 url("Images/portfolio_home.jpg") top left no-repeat;
+	background-size: 200%;
+	width: 100%;
+	background-position: 60% 0%;
+}
+
+.homepageHello, .homepageName, .homepageTitle, .homepageHead {
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	letter-spacing: 2px;
+}
+
+.unit .fancy {font-size: 60px;margin: 0%;}
+
+.homepageHello {
+	font-size: 18px;
+}
+
+.homepageName {
+	font-size: 48px;
+}
+
+.homepageTitle {
+	font-size: 18px;
+}
+
+.homepageHead {
+	margin-top: 30%;
+}
+
+.unit {
+	padding-top: 30%;
+	line-height: 1.4;
+}
+
+.slide {
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
+	-ms-transition: 2s;
+	-o-transition: 2s;
+	transition: 2s;
+	margin-top: 0% !important;
+}
+
+.homepage {
+	margin-top: -50%;
 }
 
 /* Brackets */
@@ -454,13 +528,14 @@ display: none;
 	.cms_tabset_btn {width: 15%;margin: 1% 0% 1% 6%;}
 	.cms_divisionalHeader {font-size: 16px;}
 	.cms_2RndBrktWrap, .cms_3RndBrktWrap, .cms_16BrktWrap, .cms_8BrktWrap {width: 22%;}
+	.unit {padding-top: 40%;}
 }
 
 @media screen and (min-width: 850px){
 	.heading {max-width: 30%;}
 	.mastHead {padding-bottom: 22%;}
 	.tile {width: 21%;padding: 8% 0%;}
-	.lyric {width: 40%;margin: 1% auto;}
+	.lyric, .post {width: 60%;margin: 1% auto;}
 	.cms_BrktDivHeader {display: inherit;font-size: 70px;}
 	.cms_divisionalHeader {font-size: 24px;}
 	.cms_BrktDivHeader {display: inherit;font-size: 70px;margin: 24% 0%;}
@@ -468,13 +543,20 @@ display: none;
 	.cms_3RndBrktWrap .cms_2ndBrkt, .cms_3rdBrkt, .cms_4thBrkt {margin-top: 33%;}
 	.cms_16BrktWrap .cms_GameWrapperA {margin-top: 32%;}
 	.cms_8BrktWrap .cms_GameWrapperA {padding-top: 95%;}
+	.jnlPost {width: 21%;}
+	.albumArt {width: 80%;}
+	.backgroundHome {background-size: 160%;}
+	.homepageHello {font-size: 42px;}
+	.homepageName {font-size: 94px;}
+	.homepageTitle {font-size: 48px;}
 }
 
 @media screen and (min-width: 1100px) {
 	.cms_3RndBrktWrap .cms_2ndBrkt, .cms_3rdBrkt, .cms_4thBrkt {margin-top: 30%;}
 	.cms_16BrktWrap .cms_GameWrapperA {margin-top: 28%;}
 	.cms_8BrktWrap .cms_GameWrapperA {padding-top: 85%;}
-	.cms_BrktDivHeader {margin: 22% 0%;
+	.cms_BrktDivHeader {margin: 22% 0%;}
+	#homepage {margin-top: -30%;}
 }
 
 @media screen and (min-width: 1300px) {
